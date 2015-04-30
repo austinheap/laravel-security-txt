@@ -1,10 +1,10 @@
 # robots.txt Generator for Laravel 5
 
-![Current Release](https://img.shields.io/github/release/ellisthedev/laravel-5-robots.svg)
-![Total Downloads](https://img.shields.io/packagist/dt/ellisthedev/laravel-5-robots.svg)
-[![Build Status](https://travis-ci.org/ellisthedev/laravel-5-robots.svg?branch=master)](https://travis-ci.org/ellisthedev/laravel-5-robots.svg)
-![Code Coverage](https://img.shields.io/codecov/c/github/ellisthedev/laravel-5-robots.svg)
-![Code Climate](https://img.shields.io/codeclimate/github/ellisthedev/laravel-5-robot.svg)
+[![Current Release](https://img.shields.io/github/release/ellisthedev/laravel-5-robots.svg)](https://github.com/ellisthedev/laravel-5-robots/releases)
+[![Total Downloads](https://img.shields.io/packagist/dt/ellisthedev/laravel-5-robots.svg)](https://packagist.org/packages/ellisthedev/laravel-5-robots)
+[![Build Status](https://travis-ci.org/ellisthedev/laravel-5-robots.svg?branch=master)](https://travis-ci.org/ellisthedev/laravel-5-robots)
+[![Code Coverage](https://img.shields.io/codecov/c/github/ellisthedev/laravel-5-robots.svg)](https://codecov.io/github/ellisthedev/laravel-5-robots)
+[![Code Climate](https://img.shields.io/codeclimate/github/ellisthedev/laravel-5-robot.svg)](https://codeclimate.com/github/ellisthedev/laravel-5-robots)
 
 This is a fork of https://github.com/jayhealey/Robots. It appears development
 has stalled on the original repository.
