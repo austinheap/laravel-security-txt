@@ -60,7 +60,7 @@ Route::get('robots.txt', function ()
 });
 ```
 
-Refer to the [Robots.php](src/EllisTheDev/Robots/Robots.php) for API usage.
+Refer to the [Robots.php](src/Robots.php) for API usage.
 
 # License
 
