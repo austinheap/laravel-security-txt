@@ -117,18 +117,6 @@ class Robots
     }
 
     /**
-     * Add multiple lines to the robots.txt.
-     *
-     * @param string|array $lines
-     */
-    protected function addLines($lines)
-    {
-        foreach ((array) $lines as $line) {
-            $this->addLine($line);
-        }
-    }
-
-    /**
      * Reset the lines.
      *
      * @return void

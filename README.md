@@ -1,6 +1,6 @@
 # robots.txt Generator for Laravel 5
 
-[![Build Status](https://travis-ci.org/ellisthedev/laravel-5-robots.svg?branch=master)](https://travis-ci.org/ellisthedev/laravel-5-robots) [![Total Downloads](https://img.shields.io/packagist/dt/ellisthedev/laravel-5-robots.svg)] [![Code Coverage](https://img.shields.io/codecov/c/github/ellisthedev/laravel-5-robots.svg)]
+[![Current Release](https://img.shields.io/github/release/ellisthedev/laravel-5-robots.svg)] [![Total Downloads](https://img.shields.io/packagist/dt/ellisthedev/laravel-5-robots.svg)] [![Build Status](https://travis-ci.org/ellisthedev/laravel-5-robots.svg?branch=master)](https://travis-ci.org/ellisthedev/laravel-5-robots)] [![Code Coverage](https://img.shields.io/codecov/c/github/ellisthedev/laravel-5-robots.svg)] [![Code Climate](https://img.shields.io/codeclimate/github/kabisaict/flow.svg)]
 
 This is a fork of https://github.com/jayhealey/Robots. It appears development
 has stalled on the original repository.
