@@ -1,6 +1,7 @@
 {
     "name": "ellisthedev/laravel-5-robots",
     "description": "Robots.txt Generator for Laravel 5",
+    "license": "MIT",
     "authors": [
         {
             "name": "Andrew Ellis",
