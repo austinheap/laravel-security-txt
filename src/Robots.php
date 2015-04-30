@@ -32,7 +32,7 @@ class Robots
      */
     public function addSitemap($sitemap)
     {
-        $this->addLine("Sitemap: $sitemap");
+        $this->addLine('Sitemap: '.$sitemap);
     }
 
     /**
@@ -42,7 +42,7 @@ class Robots
      */
     public function addUserAgent($userAgent)
     {
-        $this->addLine("User-agent: $userAgent");
+        $this->addLine('User-agent: '.$userAgent);
     }
 
     /**
@@ -52,7 +52,7 @@ class Robots
      */
     public function addHost($host)
     {
-        $this->addLine("Host: $host");
+        $this->addLine('Host: '.$host);
     }
 
     /**
@@ -84,7 +84,7 @@ class Robots
     protected function addRuleLine($directories, $rule)
     {
         foreach ((array) $directories as $directory) {
-            $this->addLine("$rule: $directory");
+            $this->addLine($rule.': '.$directory);
         }
     }
 
