@@ -1,15 +1,12 @@
 <?php
-namespace EllisTheDev\Robots;
+
+namespace InfusionWeb\Laravel\Robots;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * Class RobotsFacade
- *
- * @package EllisTheDev\Robots
- */
 class RobotsFacade extends Facade
 {
+
     /**
      * Get the registered name of the component.
      *
@@ -19,4 +16,5 @@ class RobotsFacade extends Facade
     {
         return 'robots';
     }
+
 }

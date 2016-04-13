@@ -1,16 +1,24 @@
 {
-    "name": "ellisthedev/laravel-5-robots",
-    "description": "Robots.txt Generator for Laravel 5",
+    "name": "infusionweb/laravel-robots-route",
+    "description": "A route for serving a basic robots.txt in Laravel 5.1+, based on configuration settings.",
+    "keywords": [
+        "robots.txt",
+        "route",
+        "laravel"
+    ],
+    "homepage": "https://github.com/infusionweb/laravel-robots-route",
     "license": "MIT",
     "authors": [
         {
-            "name": "Andrew Ellis",
-            "email": "awellis89@gmail.com"
+            "name": "Russell Keppner",
+            "email": "russell.keppner@gmail.com",
+            "homepage": "https://github.com/rkeppner",
+            "role": "Developer"
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": ">=5.0"
+        "php": ">=5.5.9",
+        "illuminate/support": "^5.1"
     },
     "require-dev": {
         "codeclimate/php-test-reporter": "dev-master",
@@ -18,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "EllisTheDev\\Robots\\": "src/"
+            "InfusionWeb\\Laravel\\Robots\\": "src"
         }
     },
     "minimum-stability": "stable"

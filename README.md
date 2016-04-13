@@ -1,67 +1,74 @@
-# robots.txt Generator for Laravel 5
+# Laravel 5 robots.txt Route
 
-[![Current Release](https://img.shields.io/github/release/ellisthedev/laravel-5-robots.svg)](https://github.com/ellisthedev/laravel-5-robots/releases)
-[![Total Downloads](https://img.shields.io/packagist/dt/ellisthedev/laravel-5-robots.svg)](https://packagist.org/packages/ellisthedev/laravel-5-robots)
-[![Build Status](https://travis-ci.org/ellisthedev/laravel-5-robots.svg?branch=master)](https://travis-ci.org/ellisthedev/laravel-5-robots)
-[![Code Climate](https://codeclimate.com/github/ellisthedev/laravel-5-robots/badges/gpa.svg)](https://codeclimate.com/github/ellisthedev/laravel-5-robots)
-[![Test Coverage](https://codeclimate.com/github/ellisthedev/laravel-5-robots/badges/coverage.svg)](https://codeclimate.com/github/ellisthedev/laravel-5-robots)
+## A route for serving a basic robots.txt in Laravel 5.1+, based on configuration settings.
 
-This is a fork of https://github.com/jayhealey/Robots. It appears development
-has stalled on the original repository.
+This is a fork of [ellisthedev/laravel-5-robots](https://github.com/ellisthedev/laravel-5-robots),
+which was a fork of [jayhealey/Robots](https://github.com/jayhealey/Robots),
+which was based on earlier work.
 
-The purpose of this fork is to introduce Laravel 5 compatibility and PSR-4 and
-PSR-2 (for Laravel 5.1).
+The purpose of this fork is to create a set-it-and-forget-it package that can be
+installed without much effort. It is therefore highly opinionated and not built
+for configuration.
 
-# Installation
+When enabled, it allows access to all clients and serves up the sitemap.xml.
+Otherwise, it operates almost identically to Laravel's default configuration,
+denying access to all clients.
 
-## Step 1: Composer
+## Installation
 
-Add the package to your `composer.json`:
+### Step 1: Composer
 
+Via Composer command line:
+
+```bash
+$ composer require infusionweb/laravel-robots-route
 ```
+
+Or add the package to your `composer.json`:
+
+```json
 {
     "require": {
-        "ellisthedev/laravel-5-robots": "~0.1.0"
+        "infusionweb/laravel-robots-route": "~0.1.0"
     }
 }
 ```
 
-## Step 2: Configuration
+### Step 2: Remove the existing robots.txt
 
-Add the following to your `config/app.php` in the `providers` array:
+Laravel ships with a default robots.txt which disallows all clients. It needs to be removed for the configured route to work.
 
-```
-'EllisTheDev\Robots\RobotsServiceProvider',
-```
-
-You can also optionally add the following to the `aliases` array:
-
-```
-'Robots' => 'EllisTheDev\Robots\RobotsFacade',
+```bash
+$ rm public/robots.txt
 ```
 
-# Usage
+### Step 3: Enable the route
 
-Add the following to your routes file:
+Publish the package config file:
+
+```bash
+$ php artisan vendor:publish --provider="InfusionWeb\Laravel\Robots\RobotsServiceProvider"
+```
+
+You may now allow clients via robots.txt by editing the `config/robots.php` file, opening up the site to search engines:
 
 ```php
-Route::get('robots.txt', function ()
-{
-    if (App::environment() == 'production') {
-        // If on the live server, serve a nice, welcoming robots.txt.
-        Robots::addUserAgent('*');
-        Robots::addSitemap('sitemap.xml');
-    } else {
-        // If you're on any other server, tell everyone to go away.
-        Robots::addDisallow('*');
-    }
-
-    return Response::make(Robots::generate(), 200, ['Content-Type' => 'text/plain']);
-});
+return [
+    'allow' => env('ROBOTS_ALLOW', true),
+];
 ```
 
-Refer to the [Robots.php](src/Robots.php) for API usage.
+Or simply setting the the `ROBOTS_ALLOW` environment variable to true, via the Laravel `.env` file or hosting environment.
 
-# License
+```bash
+ROBOTS_ALLOW=true
+```
 
-[MIT](LICENSE)
+## Credits
+
+- [Russell Keppner](https://github.com/rkeppner)
+- [All Contributors](https://github.com/InfusionWeb/laravel-robots-route/contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.

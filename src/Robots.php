@@ -1,13 +1,10 @@
 <?php
-namespace EllisTheDev\Robots;
 
-/**
- * Class Robots
- *
- * @package EllisTheDev\Robots
- */
+namespace InfusionWeb\Laravel\Robots;
+
 class Robots
 {
+
     /**
      * The lines for the robots.txt.
      *
@@ -125,4 +122,5 @@ class Robots
     {
         $this->lines = [];
     }
+
 }
