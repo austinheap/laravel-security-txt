@@ -5,5 +5,5 @@
  */
 Route::get('robots.txt', [
     'as' => 'robots.document',
-    'uses' => 'RobotsController@document'
+    'uses' => 'InfusionWeb\Laravel\Robots\RobotsController@document'
 ]);

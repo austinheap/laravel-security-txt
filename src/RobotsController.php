@@ -11,15 +11,17 @@ class RobotsController extends Controller
 
     public function document()
     {
+        $robots = new Robots();
+
         if (config('robots.allow', false)) {
             // If allowed, serve a nice, welcoming robots.txt.
-            Robots::addUserAgent('*');
-            Robots::addSitemap('sitemap.xml');
+            $robots->addUserAgent('*');
+            $robots->addSitemap('sitemap.xml');
         } else {
             // If not, tell everyone to go away.
-            Robots::addDisallow('*');
+            $robots->addDisallow('*');
         }
 
-        return Response::make(Robots::generate(), 200, ['Content-Type' => 'text/plain']);
+        return Response::make($robots->generate(), 200, ['Content-Type' => 'text/plain']);
     }
 }
