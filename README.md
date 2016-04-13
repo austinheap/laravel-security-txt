@@ -44,6 +44,15 @@ $ rm public/robots.txt
 
 ### Step 3: Enable the route
 
+Add the service provider to your `config/app.php`:
+
+```php
+'providers' => [
+    //
+    InfusionWeb\Laravel\Robots\RobotsServiceProvider::class,
+];
+```
+
 Publish the package config file:
 
 ```bash
