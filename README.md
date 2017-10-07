@@ -31,7 +31,7 @@ Or add the package to your `composer.json`:
 ```json
 {
     "require": {
-        "austinheap/laravel-security-txt": "^0.2.0"
+        "austinheap/laravel-security-txt": "^0.2.5"
     }
 }
 ```
