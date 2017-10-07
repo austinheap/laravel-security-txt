@@ -41,7 +41,7 @@ Or add the package to your `composer.json`:
 Laravel doesn't ship with a default `security.txt` file. If you have added one, it needs to be removed for the configured route to work.
 
 ```bash
-$ rm public/security.txt
+$ rm public/.well-known/security.txt
 ```
 
 ### Step 3: Enable the route
