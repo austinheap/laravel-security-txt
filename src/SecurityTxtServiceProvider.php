@@ -1,10 +1,8 @@
 <?php
 
-namespace InfusionWeb\Laravel\Robots;
+namespace AustinHeap\Security\Txt;
 
-use Illuminate\Support\ServiceProvider;
-
-class RobotsServiceProvider extends ServiceProvider
+class SecurityTxtServiceProvider extends \Illuminate\Support\ServiceProvider
 {
 
     /**
@@ -22,12 +20,11 @@ class RobotsServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/robots.php' => config_path('robots.php'),
+            __DIR__ . '/config/security-txt.php' => config_path('security-txt.php'),
         ]);
 
-        if (! $this->app->routesAreCached()) {
-            require __DIR__.'/routing/routes.php';
-        }
+        if (! $this->app->routesAreCached())
+            require __DIR__ . '/routes/security-txt.php';
     }
 
     /**
@@ -38,11 +35,11 @@ class RobotsServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/config/robots.php', 'length'
+            __DIR__ . '/config/security-txt.php', 'security-txt'
         );
 
-        $this->app->singleton('robots', function () {
-            return new Robots;
+        $this->app->singleton('securitytxt', function () {
+            return new SecurityTxt;
         });
     }
 

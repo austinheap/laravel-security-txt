@@ -1,10 +1,8 @@
 <?php
 
-namespace InfusionWeb\Laravel\Robots;
+namespace AustinHeap\Security\Txt;
 
-use Illuminate\Support\Facades\Facade;
-
-class RobotsFacade extends Facade
+class SecurityTxtFacade extends \Illuminate\Support\Facades\Facade
 {
 
     /**
@@ -14,7 +12,7 @@ class RobotsFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'robots';
+        return 'securitytxt';
     }
 
 }

@@ -1,32 +1,33 @@
 {
-    "name": "infusionweb/laravel-robots-route",
-    "description": "A route for serving a basic robots.txt in Laravel 5.1+, based on configuration settings.",
+    "name": "austinheap/laravel-security-txt",
+    "description": "A package for serving `security.txt` in Laravel 5.5+, based on configuration settings.",
     "keywords": [
-        "robots.txt",
+        "security.txt",
+        "security",
         "route",
         "laravel"
     ],
-    "homepage": "https://github.com/infusionweb/laravel-robots-route",
+    "homepage": "https://github.com/austinheap/laravel-security-txt",
     "license": "MIT",
     "authors": [
         {
-            "name": "Russell Keppner",
-            "email": "russell.keppner@gmail.com",
-            "homepage": "https://github.com/rkeppner",
+            "name": "Austin Heap",
+            "email": "me@austinheap.com",
+            "homepage": "https://github.com/austinheap",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": ">=5.5.9",
-        "illuminate/support": "^5.1"
+        "php": ">=7.0.0",
+        "laravel/framework": "5.5.*"
     },
     "require-dev": {
         "codeclimate/php-test-reporter": "dev-master",
-        "phpunit/phpunit": "~4.6"
+        "phpunit/phpunit": "~6.0"
     },
     "autoload": {
         "psr-4": {
-            "InfusionWeb\\Laravel\\Robots\\": "src"
+            "AustinHeap\\Security\\Txt\\": "src"
         }
     },
     "minimum-stability": "stable"

@@ -5,3 +5,4 @@ docs
 vendor
 .DS_Store
 .idea
+.phpintel
