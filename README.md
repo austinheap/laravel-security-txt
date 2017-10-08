@@ -4,6 +4,8 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/austinheap/laravel-security-txt.svg)](https://packagist.org/packages/austinheap/laravel-security-txt)
 [![Build Status](https://travis-ci.org/austinheap/laravel-security-txt.svg?branch=master)](https://travis-ci.org/austinheap/laravel-security-txt)
 [![Code Climate](https://codeclimate.com/github/austinheap/laravel-security-txt/badges/gpa.svg)](https://codeclimate.com/github/austinheap/laravel-security-txt)
+[![Scrutinizer CI](https://scrutinizer-ci.com/g/austinheap/laravel-security-txt/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/austinheap/laravel-security-txt/)
+[![SensioLabs](https://insight.sensiolabs.com/projects/9fe66b91-58ad-4bc3-9ec9-37b396bb4837/mini.png)](https://insight.sensiolabs.com/projects/9fe66b91-58ad-4bc3-9ec9-37b396bb4837)
 [![Test Coverage](https://codeclimate.com/github/austinheap/laravel-security-txt/badges/coverage.svg)](https://codeclimate.com/github/austinheap/laravel-security-txt)
 
 ## A package for serving `security.txt` in Laravel 5.5+, based on configuration settings.
