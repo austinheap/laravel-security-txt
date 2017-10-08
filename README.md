@@ -10,14 +10,14 @@
 
 The purpose of this project is to create a set-it-and-forget-it package that can be
 installed without much effort to get a Laravel project compliant with the current
-`[security.txt](https://securitytxt.org/)` spec. It is therefore highly opinionated
+[`security.txt`](https://securitytxt.org/) spec. It is therefore highly opinionated
 but built for configuration.
 
 When enabled, it allows access to all clients and serves up the `security.txt`.
 Otherwise, it operates almost identically to Laravel's default configuration,
 denying access to all clients.
 
-[Security.txt](https://github.com/securitytxt) is a [draft](https://tools.ietf.org/html/draft-foudil-securitytxt-00)
+[`security.txt`](https://github.com/securitytxt) is a [draft](https://tools.ietf.org/html/draft-foudil-securitytxt-00)
 "standard" which allows websites to define security policies. This "standard"
 sets clear guidelines for security researchers on how to report security issues,
 and allows bug bounty programs to define a scope. Security.txt is the equivalent
