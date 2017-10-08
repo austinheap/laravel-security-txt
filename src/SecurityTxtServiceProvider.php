@@ -13,6 +13,10 @@ namespace AustinHeap\Security\Txt;
 
 /**
  * SecurityTxtServiceProvider
+ *
+ * @link        https://github.com/austinheap/laravel-security-txt
+ * @link        https://packagist.org/packages/austinheap/laravel-security-txt
+ * @link        https://austinheap.github.io/laravel-security-txt/classes/AustinHeap.Security.Txt.SecurityTxtServiceProvider.html
  */
 class SecurityTxtServiceProvider extends \Illuminate\Support\ServiceProvider
 {

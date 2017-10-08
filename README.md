@@ -16,7 +16,9 @@ When enabled, it allows access to all clients and serves up the `security.txt`.
 Otherwise, it operates almost identically to Laravel's default configuration,
 denying access to all clients.
 
-[Documentation for laravel-security-txt](https://austinheap.github.io/laravel-security-txt/) is available and kept in the [`docs/`](https://github.com/austinheap/laravel-security-txt/tree/master/docs) directory.
+There is [documentation for `laravel-security-txt` online](https://austinheap.github.io/laravel-security-txt/),
+the source of which is in the [`docs/`](https://github.com/austinheap/laravel-security-txt/tree/master/docs)
+directory. The most logical place to start are the [docs for the `SecurityTxt` class](https://austinheap.github.io/laravel-security-txt/classes/AustinHeap.Security.Txt.SecurityTxt.html).
 
 ## Installation
 

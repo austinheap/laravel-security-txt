@@ -13,6 +13,10 @@ namespace AustinHeap\Security\Txt;
 
 /**
  * SecurityTxtFacade
+ *
+ * @link        https://github.com/austinheap/laravel-security-txt
+ * @link        https://packagist.org/packages/austinheap/laravel-security-txt
+ * @link        https://austinheap.github.io/laravel-security-txt/classes/AustinHeap.Security.Txt.SecurityTxtFacade.html
  */
 class SecurityTxtFacade extends \Illuminate\Support\Facades\Facade
 {

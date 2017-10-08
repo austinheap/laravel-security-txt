@@ -11,10 +11,12 @@ declare(strict_types=1);
 
 namespace AustinHeap\Security\Txt;
 
-use Exception;
-
 /**
  * SecurityTxt
+ *
+ * @link        https://github.com/austinheap/laravel-security-txt
+ * @link        https://packagist.org/packages/austinheap/laravel-security-txt
+ * @link        https://austinheap.github.io/laravel-security-txt/classes/AustinHeap.Security.Txt.SecurityTxt.html
  */
 class SecurityTxt
 {
@@ -156,7 +158,7 @@ class SecurityTxt
             $this->addComment('Our security address');
 
         if (empty($this->contacts))
-            throw new Exception('One (or more) contacts must be defined.');
+            throw new \Exception('One (or more) contacts must be defined.');
 
         foreach ($this->contacts as $contact)
             $this->addLine('Contact: ' . trim($contact));
@@ -534,7 +536,7 @@ class SecurityTxt
     public function setEncryption(string $encryption): SecurityTxt
     {
         if (filter_var($encryption, FILTER_VALIDATE_URL) === false)
-            throw new Exception('Encryption must be a well-formed URL.');
+            throw new \Exception('Encryption must be a well-formed URL.');
 
         $this->encryption = $encryption;
 
@@ -560,7 +562,7 @@ class SecurityTxt
     public function setDisclosure(string $disclosure): SecurityTxt
     {
         if (!in_array(trim(strtolower($disclosure)), ['full', 'partial', 'none']))
-            throw new Exception('Disclosure policy must be either "full", "partial", or "none".');
+            throw new \Exception('Disclosure policy must be either "full", "partial", or "none".');
 
         $this->disclosure = $disclosure;
 
@@ -586,7 +588,7 @@ class SecurityTxt
     public function setAcknowledgement(string $acknowledgement): SecurityTxt
     {
         if (filter_var($acknowledgement, FILTER_VALIDATE_URL) === false)
-            throw new Exception('Acknowledgement must be a well-formed URL.');
+            throw new \Exception('Acknowledgement must be a well-formed URL.');
 
         $this->acknowledgement = $acknowledgement;
 
