@@ -1,7 +1,19 @@
 <?php
+/**
+ * src/SecurityTxtController.php
+ *
+ * @package     laravel-security-txt
+ * @author      Austin Heap <me@austinheap.com>
+ * @version     v0.2.5
+ */
+
+declare(strict_types=1);
 
 namespace AustinHeap\Security\Txt;
 
+/**
+ * SecurityTxtController
+ */
 class SecurityTxtController extends \App\Http\Controllers\Controller
 {
 

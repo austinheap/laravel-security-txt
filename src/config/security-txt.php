@@ -1,4 +1,11 @@
 <?php
+/**
+ * src/config/security-txt.php
+ *
+ * @package     laravel-security-txt
+ * @author      Austin Heap <me@austinheap.com>
+ * @version     v0.2.5
+ */
 
 return [
 

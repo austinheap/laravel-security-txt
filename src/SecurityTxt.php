@@ -1,9 +1,21 @@
 <?php
+/**
+ * src/SecurityTxt.php
+ *
+ * @package     laravel-security-txt
+ * @author      Austin Heap <me@austinheap.com>
+ * @version     v0.2.5
+ */
+
+declare(strict_types=1);
 
 namespace AustinHeap\Security\Txt;
 
 use Exception;
 
+/**
+ * SecurityTxt
+ */
 class SecurityTxt
 {
 
@@ -94,7 +106,7 @@ class SecurityTxt
     /**
      * Create a new SecurityTxt instance.
      *
-     * @return void
+     * @return SecurityTxt
      */
     public function __construct()
     {
@@ -122,7 +134,8 @@ class SecurityTxt
     /**
      * Generate the data.
      *
-     * @return $this
+     * @param  bool         $reset
+     * @return SecurityTxt
      */
     public function generate(bool $reset = false): SecurityTxt
     {
@@ -193,7 +206,7 @@ class SecurityTxt
     /**
      * Enable the enabled flag.
      *
-     * @return $this
+     * @return SecurityTxt
      */
     public function enable(): SecurityTxt
     {
@@ -203,7 +216,7 @@ class SecurityTxt
     /**
      * Disable the enabled flag.
      *
-     * @return $this
+     * @return SecurityTxt
      */
     public function disable(): SecurityTxt
     {
@@ -213,8 +226,8 @@ class SecurityTxt
     /**
      * Set the enabled flag.
      *
-     * @param  bool $enabled
-     * @return $this
+     * @param  bool         $enabled
+     * @return SecurityTxt
      */
     public function setEnabled(bool $enabled): SecurityTxt
     {
@@ -236,7 +249,7 @@ class SecurityTxt
     /**
      * Enable the comments flag.
      *
-     * @return $this
+     * @return SecurityTxt
      */
     public function enableComments(): SecurityTxt
     {
@@ -246,7 +259,7 @@ class SecurityTxt
     /**
      * Disable the comments flag.
      *
-     * @return $this
+     * @return SecurityTxt
      */
     public function disableComments(): SecurityTxt
     {
@@ -256,8 +269,8 @@ class SecurityTxt
     /**
      * Set the comments flag.
      *
-     * @param  string $comments
-     * @return $this
+     * @param  string       $comments
+     * @return SecurityTxt
      */
     public function setComments(bool $comments): SecurityTxt
     {
@@ -279,7 +292,7 @@ class SecurityTxt
     /**
      * Enable the debug flag.
      *
-     * @return $this
+     * @return SecurityTxt
      */
     public function enableDebug(): SecurityTxt
     {
@@ -289,7 +302,7 @@ class SecurityTxt
     /**
      * Disable the debug flag.
      *
-     * @return $this
+     * @return SecurityTxt
      */
     public function disableDebug(): SecurityTxt
     {
@@ -299,8 +312,8 @@ class SecurityTxt
     /**
      * Set the debug flag.
      *
-     * @param  bool $debug
-     * @return $this
+     * @param  bool         $debug
+     * @return SecurityTxt
      */
     public function setDebug(bool $debug): SecurityTxt
     {
@@ -322,7 +335,7 @@ class SecurityTxt
     /**
      * Enable the cache flag.
      *
-     * @return $this
+     * @return SecurityTxt
      */
     public function enableCache(): SecurityTxt
     {
@@ -332,7 +345,7 @@ class SecurityTxt
     /**
      * Disable the cache flag.
      *
-     * @return $this
+     * @return SecurityTxt
      */
     public function disableCache(): SecurityTxt
     {
@@ -342,8 +355,8 @@ class SecurityTxt
     /**
      * Set the cache flag.
      *
-     * @param  bool $cache
-     * @return $this
+     * @param  bool         $cache
+     * @return SecurityTxt
      */
     public function setCache(bool $cache): SecurityTxt
     {
@@ -365,8 +378,8 @@ class SecurityTxt
     /**
      * Set the cache key.
      *
-     * @param  string $cacheKey
-     * @return $this
+     * @param  string       $cacheKey
+     * @return SecurityTxt
      */
     public function setCacheKey(string $cacheKey): SecurityTxt
     {
@@ -388,8 +401,8 @@ class SecurityTxt
     /**
      * Set the cache time.
      *
-     * @param  int $cacheTime
-     * @return $this
+     * @param  int          $cacheTime
+     * @return SecurityTxt
      */
     public function setCacheTime(int $cacheTime): SecurityTxt
     {
@@ -411,8 +424,8 @@ class SecurityTxt
     /**
      * Set the text.
      *
-     * @param  string $text
-     * @return $this
+     * @param  string       $text
+     * @return SecurityTxt
      */
     public function setText(string $text): SecurityTxt
     {
@@ -424,6 +437,8 @@ class SecurityTxt
     /**
      * Get the text.
      *
+     * @param  bool   $generate
+     * @param  bool   $reset
      * @return string
      */
     public function getText(bool $generate = false, bool $reset = false): string
@@ -437,8 +452,8 @@ class SecurityTxt
     /**
      * Set the contacts.
      *
-     * @param  array $contacts
-     * @return $this
+     * @param  array        $contacts
+     * @return SecurityTxt
      */
     public function setContacts(array $contacts): SecurityTxt
     {
@@ -461,7 +476,7 @@ class SecurityTxt
      * Add a contact.
      *
      * @param  string $contact
-     * @return $this
+     * @return SecurityTxt
      */
     public function addContact(string $contact): SecurityTxt
     {
@@ -472,7 +487,7 @@ class SecurityTxt
      * Add contacts.
      *
      * @param  array $contacts
-     * @return $this
+     * @return SecurityTxt
      */
     public function addContacts(array $contacts): SecurityTxt
     {
@@ -486,7 +501,7 @@ class SecurityTxt
      * Remove a contact.
      *
      * @param  string $contact
-     * @return $this
+     * @return SecurityTxt
      */
     public function removeContact(string $contact): SecurityTxt
     {
@@ -499,7 +514,7 @@ class SecurityTxt
      * Remove contacts.
      *
      * @param  array $contacts
-     * @return $this
+     * @return SecurityTxt
      */
     public function removeContacts(array $contacts): SecurityTxt
     {
@@ -514,7 +529,7 @@ class SecurityTxt
      * Set the encryption.
      *
      * @param  string $encryption
-     * @return $this
+     * @return SecurityTxt
      */
     public function setEncryption(string $encryption): SecurityTxt
     {
@@ -540,7 +555,7 @@ class SecurityTxt
      * Set the disclosure policy.
      *
      * @param  string $disclosure
-     * @return $this
+     * @return SecurityTxt
      */
     public function setDisclosure(string $disclosure): SecurityTxt
     {
@@ -566,7 +581,7 @@ class SecurityTxt
      * Set the acknowledgement URL.
      *
      * @param  string $acknowledgement
-     * @return $this
+     * @return SecurityTxt
      */
     public function setAcknowledgement(string $acknowledgement): SecurityTxt
     {
@@ -592,9 +607,9 @@ class SecurityTxt
      * Add a comment.
      *
      * @param  string $comment
-     * @return $this
+     * @return SecurityTxt
      */
-    public function addComment(string $comment = ''): SecurityTxt
+    private function addComment(string $comment = ''): SecurityTxt
     {
         $comment = trim($comment);
 
@@ -607,9 +622,9 @@ class SecurityTxt
     /**
      * Add a spacer.
      *
-     * @return $this
+     * @return SecurityTxt
      */
-    public function addSpacer(): SecurityTxt
+    private function addSpacer(): SecurityTxt
     {
         return $this->addLine('');
     }
@@ -618,9 +633,9 @@ class SecurityTxt
      * Add a line.
      *
      * @param  string $line
-     * @return $this
+     * @return SecurityTxt
      */
-    protected function addLine(string $line): SecurityTxt
+    private function addLine(string $line): SecurityTxt
     {
         $this->lines[] = $line;
 
@@ -630,9 +645,9 @@ class SecurityTxt
     /**
      * Reset the lines.
      *
-     * @return $this
+     * @return SecurityTxt
      */
-    public function resetLines(): SecurityTxt
+    private function resetLines(): SecurityTxt
     {
         $this->lines = [];
 
