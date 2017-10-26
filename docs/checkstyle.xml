@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<checkstyle version="1.3.0">
+  <file name="SecurityTxtHelper.php"/>
+  <file name="routes/security-txt.php"/>
+  <file name="config/security-txt.php"/>
+  <file name="SecurityTxtController.php"/>
+  <file name="SecurityTxtFacade.php"/>
+  <file name="SecurityTxtServiceProvider.php"/>
+</checkstyle>
