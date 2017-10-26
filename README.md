@@ -94,6 +94,7 @@ After installing the package with composer, simply add the following to your .en
 
 ```bash
 SECURITY_TXT_ENABLED=true
+SECURITY_TXT_CACHE=true
 SECURITY_TXT_CONTACT=security@your-site.com
 SECURITY_TXT_ENCRYPTION=https://your-site.com/pgp.key
 SECURITY_TXT_DISCLOSURE=full
