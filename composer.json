@@ -18,8 +18,8 @@
         }
     ],
     "require": {
-        "php": ">=7.0.0",
-        "laravel/framework": "5.5.*"
+        "laravel/framework": "5.5.*",
+        "austinheap/php-security-txt": "0.3.*"
     },
     "require-dev": {
         "codeclimate/php-test-reporter": "dev-master",

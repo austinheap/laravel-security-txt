@@ -4,7 +4,7 @@
  *
  * @package     laravel-security-txt
  * @author      Austin Heap <me@austinheap.com>
- * @version     v0.2.5
+ * @version     v0.3.0
  */
 
 declare(strict_types=1);
@@ -28,16 +28,10 @@ class SecurityTxtController extends \App\Http\Controllers\Controller
      */
     public function show()
     {
-        if (! config('security-txt.enabled', false))
+        if (!config('security-txt.enabled', false))
             abort(404);
 
-        return \Response::make(
-                    (new SecurityTxt)->getText(true, true),
-                    200,
-                    [
-                        'Content-Type' => 'text/plain',
-                    ]
-                );
+        return \Response::make((new SecurityTxtHelper)->fetch(), 200, ['Content-Type' => 'text/plain']);
     }
 
 }

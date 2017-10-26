@@ -4,7 +4,7 @@
  *
  * @package     laravel-security-txt
  * @author      Austin Heap <me@austinheap.com>
- * @version     v0.2.5
+ * @version     v0.3.0
  */
 
 declare(strict_types=1);
@@ -39,8 +39,11 @@ class SecurityTxtServiceProvider extends \Illuminate\Support\ServiceProvider
             __DIR__ . '/config/security-txt.php' => config_path('security-txt.php'),
         ]);
 
-        if (! $this->app->routesAreCached())
+        if (!$this->app->routesAreCached())
             require __DIR__ . '/routes/security-txt.php';
+
+        if (!defined('LARAVEL_SECURITY_TXT_VERSION'))
+            define('LARAVEL_SECURITY_TXT_VERSION', SecurityTxtHelper::VERSION);
     }
 
     /**
@@ -55,7 +58,7 @@ class SecurityTxtServiceProvider extends \Illuminate\Support\ServiceProvider
         );
 
         $this->app->singleton('securitytxt', function () {
-            return new SecurityTxt;
+            return new SecurityTxtHelper;
         });
     }
 
