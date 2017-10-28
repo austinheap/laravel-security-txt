@@ -1,18 +1,17 @@
 <?php
 /**
- * src/SecurityTxtHelper.php
+ * src/SecurityTxtHelper.php.
  *
- * @package     laravel-security-txt
  * @author      Austin Heap <me@austinheap.com>
+ *
  * @version     v0.3.0
  */
-
 declare(strict_types=1);
 
 namespace AustinHeap\Security\Txt;
 
 /**
- * SecurityTxtHelper
+ * SecurityTxtHelper.
  *
  * @link        https://github.com/austinheap/laravel-security-txt
  * @link        https://packagist.org/packages/austinheap/laravel-security-txt
@@ -20,48 +19,47 @@ namespace AustinHeap\Security\Txt;
  */
 class SecurityTxtHelper
 {
-
     /**
      * Internal version number.
      *
      * @var string
      */
-    const VERSION               = '0.3.0';
+    const VERSION = '0.3.0';
 
     /**
      * Internal SecurityTxt object.
      *
      * @var \AustinHeap\Security\Txt\Writer
      */
-    protected $writer           = null;
+    protected $writer = null;
 
     /**
      * Internal array of log entries.
      *
      * @var array
      */
-    protected $logEntries       = [];
+    protected $logEntries = [];
 
     /**
      * Enable built-in cache.
      *
      * @var bool
      */
-    protected $cache            = false;
+    protected $cache = false;
 
     /**
      * Minutes to cache output.
      *
      * @var int
      */
-    protected $cacheTime        = null;
+    protected $cacheTime = null;
 
     /**
      * Cache key to use.
      *
      * @var string
      */
-    protected $cacheKey         = 'cache:AustinHeap\Security\Txt\SecurityTxt';
+    protected $cacheKey = 'cache:AustinHeap\Security\Txt\SecurityTxt';
 
     /**
      * Create a new SecurityTxtHelper instance.
@@ -85,37 +83,29 @@ class SecurityTxtHelper
             'security-txt.acknowledgement'  => ['validator' => 'is_string',     'setter' => 'setAcknowledgement'],
         ];
 
-        foreach ($keys as $key => $mapping)
-        {
-            if (empty(config($key, null)))
-            {
-                $this->addLogEntry('"' . __CLASS__ . '" cannot process empty value for key "' . $key . '".', 'notice');
+        foreach ($keys as $key => $mapping) {
+            if (empty(config($key, null))) {
+                $this->addLogEntry('"'.__CLASS__.'" cannot process empty value for key "'.$key.'".', 'notice');
                 continue;
             }
 
-            if (!$mapping['validator'](config($key)))
-            {
-                $this->addLogEntry('"' . __CLASS__ . '" cannot find mapping "validator" method named "' . $mapping['setter'] . '".', 'warning');
+            if (!$mapping['validator'](config($key))) {
+                $this->addLogEntry('"'.__CLASS__.'" cannot find mapping "validator" method named "'.$mapping['setter'].'".', 'warning');
                 continue;
             }
 
             if (array_key_exists('self', $mapping) &&
                 is_bool($mapping['self']) &&
-                $mapping['self'] === true)
-            {
-                if (!method_exists($this, $mapping['setter']))
-                {
-                    $this->addLogEntry('"' . __CLASS__ . '" cannot find mapping "setter" method on object "' . get_class($this) . '" named "' . $mapping['setter'] . '".', 'error');
+                $mapping['self'] === true) {
+                if (!method_exists($this, $mapping['setter'])) {
+                    $this->addLogEntry('"'.__CLASS__.'" cannot find mapping "setter" method on object "'.get_class($this).'" named "'.$mapping['setter'].'".', 'error');
                     continue;
                 }
 
                 $this->{$mapping['setter']}(config($key));
-            }
-            else
-            {
-                if (!method_exists($this->writer, $mapping['setter']))
-                {
-                    $this->addLogEntry('"' . __CLASS__ . '" cannot find mapping "setter" method on object "' . get_class($this->writer) . '" named "' . $mapping['setter'] . '".', 'error');
+            } else {
+                if (!method_exists($this->writer, $mapping['setter'])) {
+                    $this->addLogEntry('"'.__CLASS__.'" cannot find mapping "setter" method on object "'.get_class($this->writer).'" named "'.$mapping['setter'].'".', 'error');
                     continue;
                 }
 
@@ -129,8 +119,9 @@ class SecurityTxtHelper
     /**
      * Add log entry.
      *
-     * @param  string       $text
-     * @param  string       $level
+     * @param string $text
+     * @param string $level
+     *
      * @return \AustinHeap\Security\Txt\SecurityTxtHelper
      */
     public function addLogEntry(string $text, string $level = 'info'): SecurityTxtHelper
@@ -152,20 +143,23 @@ class SecurityTxtHelper
         if ($this->cache) {
             $text = cache($this->cacheKey, null);
 
-            if (!is_null($text))
+            if (!is_null($text)) {
                 return $text;
+            }
         }
 
         $text = $this->writer
                      ->generate()
                      ->getText();
 
-        if ($this->writer->getComments())
-            $text .= '# Cache is ' . ($this->cache ? 'enabled with key "' . $this->cacheKey . '"' : 'disabled') . '.' . PHP_EOL .
-                     '#' . PHP_EOL;
+        if ($this->writer->getComments()) {
+            $text .= '# Cache is '.($this->cache ? 'enabled with key "'.$this->cacheKey.'"' : 'disabled').'.'.PHP_EOL.
+                     '#'.PHP_EOL;
+        }
 
-        if ($this->cache)
+        if ($this->cache) {
             cache([$this->cacheKey => $text], now()->addMinutes($this->cacheTime));
+        }
 
         return empty($text) ? '' : $text;
     }
@@ -193,7 +187,8 @@ class SecurityTxtHelper
     /**
      * Set the enabled flag.
      *
-     * @param  bool         $enabled
+     * @param bool $enabled
+     *
      * @return \AustinHeap\Security\Txt\SecurityTxtHelper
      */
     public function setEnabled(bool $enabled): SecurityTxtHelper
@@ -236,7 +231,8 @@ class SecurityTxtHelper
     /**
      * Set the cache flag.
      *
-     * @param  bool         $cache
+     * @param bool $cache
+     *
      * @return \AustinHeap\Security\Txt\SecurityTxtHelper
      */
     public function setCache(bool $cache): SecurityTxtHelper
@@ -259,7 +255,8 @@ class SecurityTxtHelper
     /**
      * Set the cache key.
      *
-     * @param  string       $cacheKey
+     * @param string $cacheKey
+     *
      * @return \AustinHeap\Security\Txt\SecurityTxtHelper
      */
     public function setCacheKey(string $cacheKey): SecurityTxtHelper
@@ -282,7 +279,8 @@ class SecurityTxtHelper
     /**
      * Set the cache time.
      *
-     * @param  int          $cacheTime
+     * @param int $cacheTime
+     *
      * @return \AustinHeap\Security\Txt\SecurityTxtHelper
      */
     public function setCacheTime(int $cacheTime): SecurityTxtHelper
@@ -301,5 +299,4 @@ class SecurityTxtHelper
     {
         return $this->cacheTime;
     }
-
 }
