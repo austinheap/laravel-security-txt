@@ -7,6 +7,7 @@
 [![Scrutinizer CI](https://scrutinizer-ci.com/g/austinheap/laravel-security-txt/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/austinheap/laravel-security-txt/)
 [![SensioLabs](https://insight.sensiolabs.com/projects/9fe66b91-58ad-4bc3-9ec9-37b396bb4837/mini.png)](https://insight.sensiolabs.com/projects/9fe66b91-58ad-4bc3-9ec9-37b396bb4837)
 [![Test Coverage](https://codeclimate.com/github/austinheap/laravel-security-txt/badges/coverage.svg)](https://codeclimate.com/github/austinheap/laravel-security-txt)
+[![StyleCI](https://styleci.io/repos/106077909/shield?branch=master)](https://styleci.io/repos/106077909)
 
 ## A package for serving `security.txt` in Laravel 5.5+, based on configuration settings.
 
