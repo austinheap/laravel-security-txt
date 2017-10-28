@@ -1,18 +1,17 @@
 <?php
 /**
- * src/SecurityTxtServiceProvider.php
+ * src/SecurityTxtServiceProvider.php.
  *
- * @package     laravel-security-txt
  * @author      Austin Heap <me@austinheap.com>
+ *
  * @version     v0.3.0
  */
-
 declare(strict_types=1);
 
 namespace AustinHeap\Security\Txt;
 
 /**
- * SecurityTxtServiceProvider
+ * SecurityTxtServiceProvider.
  *
  * @link        https://github.com/austinheap/laravel-security-txt
  * @link        https://packagist.org/packages/austinheap/laravel-security-txt
@@ -20,7 +19,6 @@ namespace AustinHeap\Security\Txt;
  */
 class SecurityTxtServiceProvider extends \Illuminate\Support\ServiceProvider
 {
-
     /**
      * Indicates if loading of the provider is deferred.
      *
@@ -36,14 +34,16 @@ class SecurityTxtServiceProvider extends \Illuminate\Support\ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/config/security-txt.php' => config_path('security-txt.php'),
+            __DIR__.'/config/security-txt.php' => config_path('security-txt.php'),
         ]);
 
-        if (!$this->app->routesAreCached())
-            require __DIR__ . '/routes/security-txt.php';
+        if (!$this->app->routesAreCached()) {
+            require __DIR__.'/routes/security-txt.php';
+        }
 
-        if (!defined('LARAVEL_SECURITY_TXT_VERSION'))
+        if (!defined('LARAVEL_SECURITY_TXT_VERSION')) {
             define('LARAVEL_SECURITY_TXT_VERSION', SecurityTxtHelper::VERSION);
+        }
     }
 
     /**
@@ -54,12 +54,11 @@ class SecurityTxtServiceProvider extends \Illuminate\Support\ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/config/security-txt.php', 'security-txt'
+            __DIR__.'/config/security-txt.php', 'security-txt'
         );
 
         $this->app->singleton('securitytxt', function () {
-            return new SecurityTxtHelper;
+            return new SecurityTxtHelper();
         });
     }
-
 }
