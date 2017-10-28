@@ -1,12 +1,10 @@
 <?php
 /**
- * src/routes/security-txt.php
+ * src/routes/security-txt.php.
  *
- * @package     laravel-security-txt
  * @author      Austin Heap <me@austinheap.com>
  * @version     v0.3.0
  */
-
 Route::get('/.well-known/security.txt', '\AustinHeap\Security\Txt\SecurityTxtController@show')
      ->name('security.txt');
 
