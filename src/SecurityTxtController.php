@@ -1,18 +1,16 @@
 <?php
 /**
- * src/SecurityTxtController.php
+ * src/SecurityTxtController.php.
  *
- * @package     laravel-security-txt
  * @author      Austin Heap <me@austinheap.com>
  * @version     v0.3.0
  */
-
 declare(strict_types=1);
 
 namespace AustinHeap\Security\Txt;
 
 /**
- * SecurityTxtController
+ * SecurityTxtController.
  *
  * @link        https://github.com/austinheap/laravel-security-txt
  * @link        https://packagist.org/packages/austinheap/laravel-security-txt
@@ -20,7 +18,6 @@ namespace AustinHeap\Security\Txt;
  */
 class SecurityTxtController extends \App\Http\Controllers\Controller
 {
-
     /**
      * Show the security.txt file.
      *
@@ -28,10 +25,10 @@ class SecurityTxtController extends \App\Http\Controllers\Controller
      */
     public function show()
     {
-        if (!config('security-txt.enabled', false))
+        if (! config('security-txt.enabled', false)) {
             abort(404);
+        }
 
         return \Response::make((new SecurityTxtHelper)->fetch(), 200, ['Content-Type' => 'text/plain']);
     }
-
 }
