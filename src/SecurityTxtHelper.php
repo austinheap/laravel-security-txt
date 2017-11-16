@@ -122,7 +122,7 @@ class SecurityTxtHelper
      * @param  string       $level
      * @return \AustinHeap\Security\Txt\SecurityTxtHelper
      */
-    public function addLogEntry(string $text, string $level = 'info'): SecurityTxtHelper
+    public function addLogEntry(string $text, string $level = 'info'): self
     {
         \Log::$level($text);
 
@@ -167,7 +167,7 @@ class SecurityTxtHelper
      *
      * @return \AustinHeap\Security\Txt\SecurityTxtHelper
      */
-    public function enable(): SecurityTxtHelper
+    public function enable(): self
     {
         return $this->setEnabled(true);
     }
@@ -177,7 +177,7 @@ class SecurityTxtHelper
      *
      * @return \AustinHeap\Security\Txt\SecurityTxtHelper
      */
-    public function disable(): SecurityTxtHelper
+    public function disable(): self
     {
         return $this->setEnabled(false);
     }
@@ -188,7 +188,7 @@ class SecurityTxtHelper
      * @param  bool         $enabled
      * @return \AustinHeap\Security\Txt\SecurityTxtHelper
      */
-    public function setEnabled(bool $enabled): SecurityTxtHelper
+    public function setEnabled(bool $enabled): self
     {
         $this->enabled = $enabled;
 
@@ -210,7 +210,7 @@ class SecurityTxtHelper
      *
      * @return \AustinHeap\Security\Txt\SecurityTxtHelper
      */
-    public function enableCache(): SecurityTxtHelper
+    public function enableCache(): self
     {
         return $this->setCache(true);
     }
@@ -220,7 +220,7 @@ class SecurityTxtHelper
      *
      * @return \AustinHeap\Security\Txt\SecurityTxtHelper
      */
-    public function disableCache(): SecurityTxtHelper
+    public function disableCache(): self
     {
         return $this->setCache(false);
     }
@@ -231,7 +231,7 @@ class SecurityTxtHelper
      * @param  bool         $cache
      * @return \AustinHeap\Security\Txt\SecurityTxtHelper
      */
-    public function setCache(bool $cache): SecurityTxtHelper
+    public function setCache(bool $cache): self
     {
         $this->cache = $cache;
 
@@ -254,7 +254,7 @@ class SecurityTxtHelper
      * @param  string       $cacheKey
      * @return \AustinHeap\Security\Txt\SecurityTxtHelper
      */
-    public function setCacheKey(string $cacheKey): SecurityTxtHelper
+    public function setCacheKey(string $cacheKey): self
     {
         $this->cacheKey = $cacheKey;
 
@@ -277,7 +277,7 @@ class SecurityTxtHelper
      * @param  int          $cacheTime
      * @return \AustinHeap\Security\Txt\SecurityTxtHelper
      */
-    public function setCacheTime(int $cacheTime): SecurityTxtHelper
+    public function setCacheTime(int $cacheTime): self
     {
         $this->cacheTime = $cacheTime;
 
