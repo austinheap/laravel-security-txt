@@ -1,6 +1,6 @@
 <?php
 /**
- * src/config/security-txt.php
+ * src/config/security-txt.php.
  *
  * @author      Austin Heap <me@austinheap.com>
  * @version     v0.3.1
