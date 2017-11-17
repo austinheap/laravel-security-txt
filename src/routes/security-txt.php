@@ -1,6 +1,6 @@
 <?php
 /**
- * src/routes/security-txt.php
+ * src/routes/security-txt.php.
  *
  * @author      Austin Heap <me@austinheap.com>
  * @version     v0.3.1
