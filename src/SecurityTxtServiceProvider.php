@@ -1,16 +1,16 @@
 <?php
 /**
- * src/SecurityTxtServiceProvider.php.
+ * src/SecurityTxtServiceProvider.php
  *
  * @author      Austin Heap <me@austinheap.com>
- * @version     v0.3.0
+ * @version     v0.3.1
  */
 declare(strict_types=1);
 
 namespace AustinHeap\Security\Txt;
 
 /**
- * SecurityTxtServiceProvider.
+ * SecurityTxtServiceProvider
  *
  * @link        https://github.com/austinheap/laravel-security-txt
  * @link        https://packagist.org/packages/austinheap/laravel-security-txt

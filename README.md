@@ -58,7 +58,11 @@ Laravel doesn't ship with a default `security.txt` file. If you have added one, 
 $ rm public/.well-known/security.txt
 ```
 
-### Step 3: Enable the route
+### Step 3: Enable the package (Optional)
+
+This package implements Laravel 5.5's auto-discovery feature. After you install it the package provider is added automatically.
+
+If you would like to declare the provider explicitly, then add the service provider to your `config/app.php`:
 
 Add the service provider to your `config/app.php`:
 
@@ -68,6 +72,8 @@ Add the service provider to your `config/app.php`:
     AustinHeap\Security\Txt\SecurityTxtServiceProvider::class,
 ];
 ```
+
+### Step 4: Configure the package
 
 Publish the package config file:
 
@@ -89,7 +95,7 @@ Or simply setting the the `SECURITY_TXT_ENABLED` environment variable to true, v
 SECURITY_TXT_ENABLED=true
 ```
 
-## Full .env Example
+## Full `.env` Example
 
 After installing the package with composer, simply add the following to your .env file:
 
