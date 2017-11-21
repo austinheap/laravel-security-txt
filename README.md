@@ -1,5 +1,7 @@
 # Laravel 5.5+ `security.txt` Package
 
+![laravel-security-txt banner from the documentation](docs/img/banner-1544x500.png?raw=true)
+
 [![Current Release](https://img.shields.io/github/release/austinheap/laravel-security-txt.svg)](https://github.com/austinheap/laravel-security-txt/releases)
 [![Total Downloads](https://img.shields.io/packagist/dt/austinheap/laravel-security-txt.svg)](https://packagist.org/packages/austinheap/laravel-security-txt)
 [![Build Status](https://travis-ci.org/austinheap/laravel-security-txt.svg?branch=master)](https://travis-ci.org/austinheap/laravel-security-txt)
