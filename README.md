@@ -3,11 +3,12 @@
 [![Current Release](https://img.shields.io/github/release/austinheap/laravel-security-txt.svg)](https://github.com/austinheap/laravel-security-txt/releases)
 [![Total Downloads](https://img.shields.io/packagist/dt/austinheap/laravel-security-txt.svg)](https://packagist.org/packages/austinheap/laravel-security-txt)
 [![Build Status](https://travis-ci.org/austinheap/laravel-security-txt.svg?branch=master)](https://travis-ci.org/austinheap/laravel-security-txt)
-[![Code Climate](https://codeclimate.com/github/austinheap/laravel-security-txt/badges/gpa.svg)](https://codeclimate.com/github/austinheap/laravel-security-txt)
+[![Dependency Status](https://gemnasium.com/badges/github.com/austinheap/laravel-security-txt.svg)](https://gemnasium.com/github.com/austinheap/laravel-security-txt)
 [![Scrutinizer CI](https://scrutinizer-ci.com/g/austinheap/laravel-security-txt/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/austinheap/laravel-security-txt/)
-[![SensioLabs](https://insight.sensiolabs.com/projects/9fe66b91-58ad-4bc3-9ec9-37b396bb4837/mini.png)](https://insight.sensiolabs.com/projects/9fe66b91-58ad-4bc3-9ec9-37b396bb4837)
-[![Test Coverage](https://codeclimate.com/github/austinheap/laravel-security-txt/badges/coverage.svg)](https://codeclimate.com/github/austinheap/laravel-security-txt)
 [![StyleCI](https://styleci.io/repos/106077909/shield?branch=master)](https://styleci.io/repos/106077909)
+[![Maintainability](https://api.codeclimate.com/v1/badges/ca1e10510f778f520bb5/maintainability)](https://codeclimate.com/github/austinheap/laravel-security-txt/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/ca1e10510f778f520bb5/test_coverage)](https://codeclimate.com/github/austinheap/laravel-security-txt/test_coverage)
+[![SensioLabs](https://insight.sensiolabs.com/projects/9fe66b91-58ad-4bc3-9ec9-37b396bb4837/mini.png)](https://insight.sensiolabs.com/projects/9fe66b91-58ad-4bc3-9ec9-37b396bb4837)
 
 ## A package for serving `security.txt` in Laravel 5.5+, based on configuration settings.
 
