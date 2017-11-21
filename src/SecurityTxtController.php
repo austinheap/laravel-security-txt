@@ -16,7 +16,7 @@ namespace AustinHeap\Security\Txt;
  * @link        https://packagist.org/packages/austinheap/laravel-security-txt
  * @link        https://austinheap.github.io/laravel-security-txt/classes/AustinHeap.Security.Txt.SecurityTxtController.html
  */
-class SecurityTxtController extends \App\Http\Controllers\Controller
+class SecurityTxtController extends \Illuminate\Routing\Controller
 {
     /**
      * Show the security.txt file.
