@@ -41,17 +41,17 @@
 <polygon fill="none" stroke="#000000" points="520.5439,-184 366.2978,-184 366.2978,-148 520.5439,-148 520.5439,-184"/>
 <text text-anchor="middle" x="443.4208" y="-162.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">SecurityTxtController</text>
 </g>
-<!-- \\App\\Http\\Controllers\\Controller -->
+<!-- \\Illuminate\\Routing\\Controller -->
 <g id="node5" class="node">
-<title>\\App\\Http\\Controllers\\Controller</title>
-<ellipse fill="none" stroke="#000000" cx="138.8034" cy="-166" rx="127.056" ry="18"/>
-<text text-anchor="middle" x="138.8034" y="-161.8" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\App\Http\Controllers\Controller</text>
+<title>\\Illuminate\\Routing\\Controller</title>
+<ellipse fill="none" stroke="#000000" cx="138.8034" cy="-166" rx="118.8452" ry="18"/>
+<text text-anchor="middle" x="138.8034" y="-161.8" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Illuminate\Routing\Controller</text>
 </g>
-<!-- \\AustinHeap\\Security\\Txt\\SecurityTxtController&#45;&gt;\\App\\Http\\Controllers\\Controller -->
+<!-- \\AustinHeap\\Security\\Txt\\SecurityTxtController&#45;&gt;\\Illuminate\\Routing\\Controller -->
 <g id="edge1" class="edge">
-<title>\\AustinHeap\\Security\\Txt\\SecurityTxtController&#45;&gt;\\App\\Http\\Controllers\\Controller</title>
-<path fill="none" stroke="#000000" d="M366.1592,-166C338.7233,-166 306.9561,-166 276.0268,-166"/>
-<polygon fill="none" stroke="#000000" points="276.0209,-162.5001 266.0209,-166 276.0208,-169.5001 276.0209,-162.5001"/>
+<title>\\AustinHeap\\Security\\Txt\\SecurityTxtController&#45;&gt;\\Illuminate\\Routing\\Controller</title>
+<path fill="none" stroke="#000000" d="M366.1592,-166C336.2883,-166 301.2832,-166 267.8153,-166"/>
+<polygon fill="none" stroke="#000000" points="267.4854,-162.5001 257.4854,-166 267.4853,-169.5001 267.4854,-162.5001"/>
 </g>
 <!-- \\AustinHeap\\Security\\Txt\\SecurityTxtFacade -->
 <g id="node3" class="node">
