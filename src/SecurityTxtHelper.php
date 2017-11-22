@@ -5,12 +5,12 @@
  * @author      Austin Heap <me@austinheap.com>
  * @version     v0.3.2
  */
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace AustinHeap\Security\Txt;
 
-use Exception;
 use Log;
+use Exception;
 
 /**
  * SecurityTxtHelper.
@@ -118,18 +118,18 @@ class SecurityTxtHelper
 
         foreach ($keys as $key => $mapping) {
             if (is_null(config($key, null))) {
-                $this->addLogEntry('"' . __CLASS__ . '" cannot process null value for key "' . $key . '".', 'debug');
+                $this->addLogEntry('"'.__CLASS__.'" cannot process null value for key "'.$key.'".', 'debug');
                 continue;
             }
 
-            if (!function_exists($mapping['validator'])) {
-                $this->addLogEntry('"' . __CLASS__ . '" cannot find "validator" function named "' . $mapping['validator'] . '".',
+            if (! function_exists($mapping['validator'])) {
+                $this->addLogEntry('"'.__CLASS__.'" cannot find "validator" function named "'.$mapping['validator'].'".',
                                    'warning');
                 continue;
             }
 
-            if (!$mapping['validator'](config($key))) {
-                $this->addLogEntry('"' . __CLASS__ . '" failed the "validator" function named "' . $mapping['validator'] . '".',
+            if (! $mapping['validator'](config($key))) {
+                $this->addLogEntry('"'.__CLASS__.'" failed the "validator" function named "'.$mapping['validator'].'".',
                                    'warning');
                 continue;
             }
@@ -137,16 +137,16 @@ class SecurityTxtHelper
             if (array_key_exists('self', $mapping) &&
                 is_bool($mapping['self']) &&
                 $mapping['self'] === true) {
-                if (!method_exists($this, $mapping['setter'])) {
-                    $this->addLogEntry('"' . __CLASS__ . '" cannot find mapping "setter" method on object "' . get_class($this) . '" named "' . $mapping['setter'] . '".',
+                if (! method_exists($this, $mapping['setter'])) {
+                    $this->addLogEntry('"'.__CLASS__.'" cannot find mapping "setter" method on object "'.get_class($this).'" named "'.$mapping['setter'].'".',
                                        'error');
                     continue;
                 }
 
                 $this->{$mapping['setter']}(config($key));
             } else {
-                if (!method_exists($this->writer, $mapping['setter'])) {
-                    $this->addLogEntry('"' . __CLASS__ . '" cannot find mapping "setter" method on object "' . get_class($this->writer) . '" named "' . $mapping['setter'] . '".',
+                if (! method_exists($this->writer, $mapping['setter'])) {
+                    $this->addLogEntry('"'.__CLASS__.'" cannot find mapping "setter" method on object "'.get_class($this->writer).'" named "'.$mapping['setter'].'".',
                                        'error');
                     continue;
                 }
@@ -207,7 +207,7 @@ class SecurityTxtHelper
         if ($this->cache) {
             $text = cache($this->cacheKey, null);
 
-            if (!is_null($text)) {
+            if (! is_null($text)) {
                 return $text;
             }
         }
@@ -217,8 +217,8 @@ class SecurityTxtHelper
             ->getText();
 
         if ($this->writer->getDebug()) {
-            $text .= '# Cache is ' . ($this->cache ? 'enabled with key "' . $this->cacheKey . '"' : 'disabled') . '.' . PHP_EOL .
-                     '#' . PHP_EOL;
+            $text .= '# Cache is '.($this->cache ? 'enabled with key "'.$this->cacheKey.'"' : 'disabled').'.'.PHP_EOL.
+                     '#'.PHP_EOL;
         }
 
         if ($this->cache) {
@@ -383,7 +383,7 @@ class SecurityTxtHelper
      */
     public function hasWriter(): bool
     {
-        return !is_null($this->writer);
+        return ! is_null($this->writer);
     }
 
     /**
@@ -393,7 +393,7 @@ class SecurityTxtHelper
      */
     public function getWriter(): Writer
     {
-        if (!$this->hasWriter()) {
+        if (! $this->hasWriter()) {
             throw new Exception('Writer not set.');
         }
 

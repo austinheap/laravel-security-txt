@@ -5,7 +5,7 @@
  * @author      Austin Heap <me@austinheap.com>
  * @version     v0.3.2
  */
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace AustinHeap\Security\Txt;
 
@@ -43,7 +43,7 @@ class SecurityTxtFacade extends \Illuminate\Support\Facades\Facade
     {
         $instance = static::getFacadeRoot();
 
-        if (!$instance) {
+        if (! $instance) {
             throw new RuntimeException('A facade root has not been set.');
         }
 
