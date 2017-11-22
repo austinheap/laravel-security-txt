@@ -1,0 +1,48 @@
+{
+    "name": "austinheap/laravel-security-txt",
+    "description": "A package for serving `security.txt` in Laravel 5.5+, based on configuration settings.",
+    "keywords": [
+        "security.txt",
+        "security",
+        "route",
+        "laravel"
+    ],
+    "homepage": "https://github.com/austinheap/laravel-security-txt",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Austin Heap",
+            "email": "me@austinheap.com",
+            "homepage": "https://github.com/austinheap",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "laravel/framework": "5.5.*",
+        "austinheap/php-security-txt": "^0.4"
+    },
+    "require-dev": {
+        "codeclimate/php-test-reporter": "dev-master",
+        "phpunit/phpunit": "~6.0",
+        "orchestra/testbench": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "AustinHeap\\Security\\Txt\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AustinHeap\\Security\\Txt\\SecurityTxtServiceProvider"
+            ],
+            "aliases": {
+                "SecurityTxt": "AustinHeap\\Security\\Txt\\SecurityTxtFacade"
+            }
+        }
+    }
+}
