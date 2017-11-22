@@ -132,6 +132,30 @@
     </li>
 
                                                                                                         <li class="method public">
+        <a href="#method_buildWriter" title="buildWriter :: Builds the internal SecurityTxt Writer.">
+            <span class="description">Builds the internal SecurityTxt Writer.</span><pre>buildWriter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_buildWriterDefaultKeys" title="buildWriterDefaultKeys :: Returns the default config key =&gt; php-security-txt mappings.">
+            <span class="description">Returns the default config key =&gt; php-security-txt mappings.</span><pre>buildWriterDefaultKeys</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_clearCache" title="clearCache :: Clear the cache.">
+            <span class="description">Clear the cache.</span><pre>clearCache</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_clearLogEntries" title="clearLogEntries :: Clears log entries.">
+            <span class="description">Clears log entries.</span><pre>clearLogEntries</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
         <a href="#method_disable" title="disable :: Disable the enabled flag.">
             <span class="description">Disable the enabled flag.</span><pre>disable</pre>
         </a>
@@ -186,6 +210,24 @@
     </li>
 
                                                                                                         <li class="method public">
+        <a href="#method_getLogEntries" title="getLogEntries :: Add log entries.">
+            <span class="description">Add log entries.</span><pre>getLogEntries</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getWriter" title="getWriter :: Gets the internal SecurityTxt Writer.">
+            <span class="description">Gets the internal SecurityTxt Writer.</span><pre>getWriter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_hasWriter" title="hasWriter :: Determines if a SecurityTxt Writer is set.">
+            <span class="description">Determines if a SecurityTxt Writer is set.</span><pre>hasWriter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
         <a href="#method_setCache" title="setCache :: Set the cache flag.">
             <span class="description">Set the cache flag.</span><pre>setCache</pre>
         </a>
@@ -209,15 +251,21 @@
         </a>
     </li>
 
+                                                                                                        <li class="method public">
+        <a href="#method_setWriter" title="setWriter :: Sets the internal SecurityTxt Writer.">
+            <span class="description">Sets the internal SecurityTxt Writer.</span><pre>setWriter</pre>
+        </a>
+    </li>
+
                                                 </ul>
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -316,7 +364,7 @@
                                             <a id="method_addLogEntry"></a>
                         <div class="element clickable method public  method_addLogEntry" data-toggle="collapse" data-target=".method_addLogEntry .collapse">
                             <h2>Add log entry.</h2>
-                            <pre>addLogEntry(string $text, string $level = &#039;info&#039;) : \AustinHeap\Security\Txt\SecurityTxtHelper</pre>
+                            <pre>addLogEntry(string $text, string $level = &#039;debug&#039;) : \AustinHeap\Security\Txt\SecurityTxtHelper</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -338,6 +386,120 @@
                                                 <code>string</code><p></p>
                                             </div>
                                                                             
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/AustinHeap.Security.Txt.SecurityTxtHelper.html">\AustinHeap\Security\Txt\SecurityTxtHelper</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_buildWriter"></a>
+                        <div class="element clickable method public  method_buildWriter" data-toggle="collapse" data-target=".method_buildWriter .collapse">
+                            <h2>Builds the internal SecurityTxt Writer.</h2>
+                            <pre>buildWriter(array $keys = null) : \AustinHeap\Security\Txt\SecurityTxtHelper</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$keys</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/AustinHeap.Security.Txt.SecurityTxtHelper.html">\AustinHeap\Security\Txt\SecurityTxtHelper</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_buildWriterDefaultKeys"></a>
+                        <div class="element clickable method public  method_buildWriterDefaultKeys" data-toggle="collapse" data-target=".method_buildWriterDefaultKeys .collapse">
+                            <h2>Returns the default config key =&gt; php-security-txt mappings.</h2>
+                            <pre>buildWriterDefaultKeys() : array</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_clearCache"></a>
+                        <div class="element clickable method public  method_clearCache" data-toggle="collapse" data-target=".method_clearCache .collapse">
+                            <h2>Clear the cache.</h2>
+                            <pre>clearCache() : \AustinHeap\Security\Txt\SecurityTxtHelper</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/AustinHeap.Security.Txt.SecurityTxtHelper.html">\AustinHeap\Security\Txt\SecurityTxtHelper</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_clearLogEntries"></a>
+                        <div class="element clickable method public  method_clearLogEntries" data-toggle="collapse" data-target=".method_clearLogEntries .collapse">
+                            <h2>Clears log entries.</h2>
+                            <pre>clearLogEntries() : \AustinHeap\Security\Txt\SecurityTxtHelper</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
                                                                             <h3>Response</h3>
                                         <code><a href="../classes/AustinHeap.Security.Txt.SecurityTxtHelper.html">\AustinHeap\Security\Txt\SecurityTxtHelper</a></code><p></p>
                                                                     </div>
@@ -605,6 +767,93 @@
                             </div>
 
                         </div>
+                                            <a id="method_getLogEntries"></a>
+                        <div class="element clickable method public  method_getLogEntries" data-toggle="collapse" data-target=".method_getLogEntries .collapse">
+                            <h2>Add log entries.</h2>
+                            <pre>getLogEntries() : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getWriter"></a>
+                        <div class="element clickable method public  method_getWriter" data-toggle="collapse" data-target=".method_getWriter .collapse">
+                            <h2>Gets the internal SecurityTxt Writer.</h2>
+                            <pre>getWriter() : \AustinHeap\Security\Txt\Writer</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>\AustinHeap\Security\Txt\Writer</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_hasWriter"></a>
+                        <div class="element clickable method public  method_hasWriter" data-toggle="collapse" data-target=".method_hasWriter .collapse">
+                            <h2>Determines if a SecurityTxt Writer is set.</h2>
+                            <pre>hasWriter() : boolean</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
                                             <a id="method_setCache"></a>
                         <div class="element clickable method public  method_setCache" data-toggle="collapse" data-target=".method_setCache .collapse">
                             <h2>Set the cache flag.</h2>
@@ -713,6 +962,33 @@
                             </div>
 
                         </div>
+                                            <a id="method_setWriter"></a>
+                        <div class="element clickable method public  method_setWriter" data-toggle="collapse" data-target=".method_setWriter .collapse">
+                            <h2>Sets the internal SecurityTxt Writer.</h2>
+                            <pre>setWriter(\AustinHeap\Security\Txt\Writer|null $writer) : \AustinHeap\Security\Txt\SecurityTxtHelper</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$writer</h4>
+                                                <code>\AustinHeap\Security\Txt\Writer|null</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/AustinHeap.Security.Txt.SecurityTxtHelper.html">\AustinHeap\Security\Txt\SecurityTxtHelper</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
                     
                                             <h3><i class="icon-custom icon-constant"></i> Constants</h3>
                                                     <a id="constant_VERSION"> </a>
@@ -739,6 +1015,32 @@
                             </div>
                                             
                                                                 <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_enabled"> </a>
+                            <div class="element clickable property  protected property_enabled" data-toggle="collapse" data-target=".property_enabled .collapse">
+                                <h2>Enable the package.</h2>
+                                <pre>enabled : boolean</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>boolean</code>
+                                                                            </div>
+                                </div>
+                            </div>
                                                     <a id="property_writer"> </a>
                             <div class="element clickable property  protected property_writer" data-toggle="collapse" data-target=".property_writer .collapse">
                                 <h2>Internal SecurityTxt object.</h2>
@@ -889,7 +1191,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Tue, 21 Nov 2017 10:09:06 +0000.<br/>
+            generated on Wed, 22 Nov 2017 08:39:33 +0000.<br/>
     </footer>
     </body>
 </html>

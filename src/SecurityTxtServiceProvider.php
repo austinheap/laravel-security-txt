@@ -33,11 +33,11 @@ class SecurityTxtServiceProvider extends \Illuminate\Support\ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/security-txt.php' => config_path('security-txt.php'),
+            __DIR__ . '/config/security-txt.php' => config_path('security-txt.php'),
         ]);
 
         if (! $this->app->routesAreCached()) {
-            require __DIR__.'/routes/security-txt.php';
+            require __DIR__ . '/routes/security-txt.php';
         }
 
         if (! defined('LARAVEL_SECURITY_TXT_VERSION')) {
@@ -56,8 +56,16 @@ class SecurityTxtServiceProvider extends \Illuminate\Support\ServiceProvider
             __DIR__.'/config/security-txt.php', 'security-txt'
         );
 
-        $this->app->singleton('securitytxt', function () {
+        $this->app->singleton('SecurityTxt', function () {
             return new SecurityTxtHelper;
         });
+    }
+
+    /**
+     * @return \AustinHeap\Security\Txt\SecurityTxtHelper
+     */
+    public static function getInstance()
+    {
+        return app('SecurityTxt');
     }
 }

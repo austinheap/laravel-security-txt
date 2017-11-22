@@ -19,23 +19,30 @@
     ],
     "require": {
         "laravel/framework": "5.5.*",
-        "austinheap/php-security-txt": "^0.3.1"
+        "austinheap/php-security-txt": "^0.4"
     },
     "require-dev": {
         "codeclimate/php-test-reporter": "dev-master",
-        "phpunit/phpunit": "~6.0"
+        "phpunit/phpunit": "~6.0",
+        "orchestra/testbench": "^3.5"
     },
     "autoload": {
         "psr-4": {
             "AustinHeap\\Security\\Txt\\": "src"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "minimum-stability": "stable",
     "extra": {
         "laravel": {
             "providers": [
                 "AustinHeap\\Security\\Txt\\SecurityTxtServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "SecurityTxt": "AustinHeap\\Security\\Txt\\SecurityTxtFacade"
+            }
         }
     }
 }

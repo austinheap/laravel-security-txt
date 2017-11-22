@@ -9,6 +9,8 @@ declare(strict_types=1);
 
 namespace AustinHeap\Security\Txt;
 
+use Response;
+
 /**
  * SecurityTxtController.
  *
@@ -21,7 +23,7 @@ class SecurityTxtController extends \Illuminate\Routing\Controller
     /**
      * Show the security.txt file.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show()
     {
@@ -29,6 +31,24 @@ class SecurityTxtController extends \Illuminate\Routing\Controller
             abort(404);
         }
 
-        return \Response::make((new SecurityTxtHelper)->fetch(), 200, ['Content-Type' => 'text/plain']);
+        return Response::make(
+            app('SecurityTxt')->fetch(),
+            200,
+            ['Content-Type' => 'text/plain']
+        );
+    }
+
+    /**
+     * Redirect to the proper location of the security.txt file.
+     *
+     * @return Response
+     */
+    public function redirect()
+    {
+        if (! config('security-txt.enabled', false)) {
+            abort(404);
+        }
+
+        return redirect()->route('security.txt');
     }
 }
