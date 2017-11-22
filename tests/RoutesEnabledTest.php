@@ -10,12 +10,25 @@
 
 namespace AustinHeap\Security\Txt\Tests;
 
+use PHPUnit\Framework\TestResult;
+
 /**
  * RoutesEnabledTest
  */
-class RoutesEnabledTest extends TestCase
+class RoutesEnabledTest extends DocumentTestCase
 {
-    private $contact;
+    public function run(TestResult $result = null)
+    {
+        if ($result === null) {
+            $result = $this->createResult();
+        }
+
+        for ($x = 0; $x < LARAVEL_SECURITY_TXT_ITERATIONS; $x++) {
+            $result->run($this);
+        }
+
+        return $result;
+    }
 
     public function testShow()
     {
@@ -24,7 +37,10 @@ class RoutesEnabledTest extends TestCase
             $crawler->assertStatus(200);
 
             if ($method == 'GET') {
-                $crawler->assertSeeText($this->contact);
+                $crawler->assertSeeText($this->contact)
+                        ->assertSeeText('Encryption: ' . $this->encryption)
+                        ->assertSeeText('Acknowledgement: ' . $this->acknowledgement)
+                        ->assertSeeText('Disclosure: ' . ucfirst($this->disclosure));
             }
         }
 
@@ -45,16 +61,5 @@ class RoutesEnabledTest extends TestCase
             $crawler = $this->call($method, '/.well-known/security.txt');
             $crawler->assertStatus(405);
         }
-    }
-
-    protected function getEnvironmentSetUp($app)
-    {
-        $this->contact = $this->newRandom('test%s@email.com');
-
-        $app['config']->set('security-txt',
-                            [
-                                'enabled'  => true,
-                                'contacts' => [$this->contact],
-                            ]);
     }
 }

@@ -14,7 +14,8 @@ return [
 
     'cache'             => env('SECURITY_TXT_CACHE', false),
 
-    'cache-time'        => env('SECURITY_TXT_CACHE_TIME', 5),
+    'cache-time'        => is_null(env('SECURITY_TXT_CACHE_TIME', null)) ?
+                           5 : (int) env('SECURITY_TXT_CACHE_TIME'),
 
     'cache-key'         => env('SECURITY_TXT_CACHE_KEY', 'cache:AustinHeap\Security\Txt\SecurityTxt'),
 

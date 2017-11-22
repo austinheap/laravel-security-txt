@@ -13,7 +13,7 @@ namespace AustinHeap\Security\Txt\Tests;
 /**
  * CacheTest
  */
-class CacheTest extends HelperTestCase
+class CacheTest extends DocumentTestCase
 {
     public function testEnableCache()
     {

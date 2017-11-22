@@ -1,7 +1,8 @@
 <?php
 /**
- * tests/FacadeTest@package     laravel-security-txt
+ * tests/FacadeTest.php
  *
+ * @package     laravel-security-txt
  * @link        https://github.com/austinheap/laravel-security-txt
  * @author      Austin Heap <me@austinheap.com>
  * @version     v0.4.0

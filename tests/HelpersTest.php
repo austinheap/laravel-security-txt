@@ -18,6 +18,5 @@ class HelpersTest extends TestCase
     public function testHelperFunctionValid()
     {
         $this->assertEquals(function_exists('securitytxt'), true);
-
     }
 }

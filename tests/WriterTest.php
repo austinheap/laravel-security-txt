@@ -1,7 +1,8 @@
 <?php
 /**
- * tests/HelperTestCase * @package     laravel-security-txt
+ * tests/WriterTest.php
  *
+ * @package     laravel-security-txt
  * @link        https://github.com/austinheap/laravel-security-txt
  * @author      Austin Heap <me@austinheap.com>
  * @version     v0.4.0
@@ -14,9 +15,9 @@ use AustinHeap\Security\Txt\Writer;
 use Exception;
 
 /**
- * HelperTestCase
+ * WriterTest
  */
-class SecurityTextHelperTest extends HelperTestCase
+class WriterTest extends DocumentTestCase
 {
     public function testWriterConstructed()
     {

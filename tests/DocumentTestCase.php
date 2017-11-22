@@ -1,7 +1,8 @@
 <?php
 /**
- * tests/HelperTestCase * @package     laravel-security-txt
+ * tests/DocumentTestCase
  *
+ * @package     laravel-security-txt
  * @link        https://github.com/austinheap/laravel-security-txt
  * @author      Austin Heap <me@austinheap.com>
  * @version     v0.4.0
@@ -10,9 +11,9 @@
 namespace AustinHeap\Security\Txt\Tests;
 
 /**
- * HelperTestCase
+ * DocumentTestCase
  */
-class HelperTestCase extends TestCase
+class DocumentTestCase extends TestCase
 {
     protected $debug = true;
     protected $cache;
@@ -23,16 +24,6 @@ class HelperTestCase extends TestCase
     protected $encryption;
     protected $disclosure;
     protected $acknowledgement;
-
-    public function testFetch()
-    {
-        $data = app('SecurityTxt')->fetch();
-
-        $this->assertContains('Contact: ' . $this->contact, $data);
-        $this->assertContains('Encryption: ' . $this->encryption, $data);
-        $this->assertContains('Disclosure: ' . ucfirst($this->disclosure), $data);
-        $this->assertContains('Acknowledgement: ' . $this->acknowledgement, $data);
-    }
 
     protected function getEnvironmentSetUp($app)
     {
@@ -60,4 +51,13 @@ class HelperTestCase extends TestCase
                             ]);
     }
 
+    public function testFetch()
+    {
+        $data = app('SecurityTxt')->fetch();
+
+        $this->assertContains('Contact: ' . $this->contact, $data);
+        $this->assertContains('Encryption: ' . $this->encryption, $data);
+        $this->assertContains('Disclosure: ' . ucfirst($this->disclosure), $data);
+        $this->assertContains('Acknowledgement: ' . $this->acknowledgement, $data);
+    }
 }
