@@ -120,13 +120,13 @@ class SecurityTxtHelper
             if (is_null(config($key, null))) {
                 $this->addLogEntry('"'.__CLASS__.'" cannot process null value for key "'.$key.'".', 'debug');
                 continue;
-            } else if (! function_exists($mapping['validator'])) {
+            } elseif (! function_exists($mapping['validator'])) {
                 $this->addLogEntry('"'.__CLASS__.'" cannot find "validator" function named "'.$mapping['validator'].'".', 'warning');
                 continue;
-            } else if (! $mapping['validator'](config($key))) {
+            } elseif (! $mapping['validator'](config($key))) {
                 $this->addLogEntry('"'.__CLASS__.'" failed the "validator" function named "'.$mapping['validator'].'".', 'warning');
                 continue;
-            } else if (array_key_exists('self', $mapping) && is_bool($mapping['self']) && $mapping['self'] === true) {
+            } elseif (array_key_exists('self', $mapping) && is_bool($mapping['self']) && $mapping['self'] === true) {
                 if (! method_exists($this, $mapping['setter'])) {
                     $this->addLogEntry('"'.__CLASS__.'" cannot find mapping "setter" method on object "'.get_class($this).'" named "'.$mapping['setter'].'".', 'error');
                     continue;
