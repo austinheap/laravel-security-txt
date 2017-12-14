@@ -34,6 +34,20 @@ There is [documentation for `laravel-security-txt` online](https://austinheap.gi
 the source of which is in the [`docs/`](https://github.com/austinheap/laravel-security-txt/tree/master/docs)
 directory. The most logical place to start are the [docs for the `SecurityTxt` class](https://austinheap.github.io/laravel-security-txt/classes/AustinHeap.Security.Txt.SecurityTxt.html).
 
+## Table of Contents
+
+* [Summary](#a-package-for-serving-securitytxt-in-laravel-55-based-on-configuration-settings)
+* [Installation](#installation)
+    + [Step 1: Composer](#step-1-composer)
+    + [Step 2: Remove any existing `security.txt`](#step-2-remove-any-existing-securitytxt)
+    + [Step 3: Enable the package (Optional)](#step-3-enable-the-package-optional)
+    + [Step 4: Configure the package](#step-4-configure-the-package)
+* [Full `.env` Example](#full-env-example)
+* [Unit Tests](#unit-tests)
+* [References](#references)
+* [Credits](#credits)
+* [License](#license)
+
 ## Installation
 
 ### Step 1: Composer
@@ -144,6 +158,14 @@ Acknowledgement: http://some.url/acks
 # Cache is enabled with key "cache:AustinHeap\Security\Txt\SecurityTxt".
 #
 ```
+
+## Unit Tests
+
+This package has aggressive unit tests built with the wonderful [orchestral/testbench](https://github.com/orchestral/testbench)
+package which is built on top of PHPUnit.
+
+There are [code coverage reports for `laravel-security-txt`](https://austinheap.github.io/laravel-security-txt/coverage/)
+available online.
 
 ## References
 
