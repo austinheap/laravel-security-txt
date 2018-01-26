@@ -171,6 +171,7 @@ available online.
 
 - [A Method for Web Security Policies (draft-foudil-securitytxt-00)](https://tools.ietf.org/html/draft-foudil-securitytxt-00)
 - [php-security-txt](https://github.com/austinheap/php-security-txt)
+- [securitytext.org](https://securitytext.org/)
 
 ## Credits
 

@@ -17,6 +17,7 @@ use RuntimeException;
  * @link        https://github.com/austinheap/laravel-security-txt
  * @link        https://packagist.org/packages/austinheap/laravel-security-txt
  * @link        https://austinheap.github.io/laravel-security-txt/classes/AustinHeap.Security.Txt.SecurityTxtFacade.html
+ * @link        https://securitytext.org/
  */
 class SecurityTxtFacade extends \Illuminate\Support\Facades\Facade
 {

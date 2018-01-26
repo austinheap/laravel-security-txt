@@ -9,6 +9,6 @@
   <file name="SecurityTxtController.php"/>
   <file name="SecurityTxtFacade.php"/>
   <file name="SecurityTxtServiceProvider.php">
-    <error line="67" severity="error" message="No summary for method getInstance()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="68" severity="error" message="No summary for method getInstance()" source="phpDocumentor.file.PPC:ERR-50008"/>
   </file>
 </checkstyle>

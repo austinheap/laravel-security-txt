@@ -17,6 +17,7 @@ use Response;
  * @link        https://github.com/austinheap/laravel-security-txt
  * @link        https://packagist.org/packages/austinheap/laravel-security-txt
  * @link        https://austinheap.github.io/laravel-security-txt/classes/AustinHeap.Security.Txt.SecurityTxtController.html
+ * @link        https://securitytext.org/
  */
 class SecurityTxtController extends \Illuminate\Routing\Controller
 {
