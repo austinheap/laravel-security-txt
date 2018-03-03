@@ -29,11 +29,23 @@
 <path fill="none" stroke="#c0c0c0" d="M353.6069,-32C353.6069,-32 533.2348,-32 533.2348,-32 539.2348,-32 545.2348,-38 545.2348,-44 545.2348,-44 545.2348,-253 545.2348,-253 545.2348,-259 539.2348,-265 533.2348,-265 533.2348,-265 353.6069,-265 353.6069,-265 347.6069,-265 341.6069,-259 341.6069,-253 341.6069,-253 341.6069,-44 341.6069,-44 341.6069,-38 347.6069,-32 353.6069,-32"/>
 <text text-anchor="middle" x="443.4208" y="-252.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Txt</text>
 </g>
-<!-- \\AustinHeap\\Security\\Txt\\SecurityTxtHelper -->
+<!-- \\AustinHeap\\Security\\Txt\\SecurityTxtServiceProvider -->
 <g id="node1" class="node">
-<title>\\AustinHeap\\Security\\Txt\\SecurityTxtHelper</title>
-<polygon fill="none" stroke="#000000" points="507.6393,-238 379.2024,-238 379.2024,-202 507.6393,-202 507.6393,-238"/>
-<text text-anchor="middle" x="443.4208" y="-216.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">SecurityTxtHelper</text>
+<title>\\AustinHeap\\Security\\Txt\\SecurityTxtServiceProvider</title>
+<polygon fill="none" stroke="#000000" points="537.0491,-238 349.7925,-238 349.7925,-202 537.0491,-202 537.0491,-238"/>
+<text text-anchor="middle" x="443.4208" y="-216.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">SecurityTxtServiceProvider</text>
+</g>
+<!-- \\Illuminate\\Support\\ServiceProvider -->
+<g id="node5" class="node">
+<title>\\Illuminate\\Support\\ServiceProvider</title>
+<ellipse fill="none" stroke="#000000" cx="138.8034" cy="-220" rx="138.6071" ry="18"/>
+<text text-anchor="middle" x="138.8034" y="-215.8" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Illuminate\Support\ServiceProvider</text>
+</g>
+<!-- \\AustinHeap\\Security\\Txt\\SecurityTxtServiceProvider&#45;&gt;\\Illuminate\\Support\\ServiceProvider -->
+<g id="edge1" class="edge">
+<title>\\AustinHeap\\Security\\Txt\\SecurityTxtServiceProvider&#45;&gt;\\Illuminate\\Support\\ServiceProvider</title>
+<path fill="none" stroke="#000000" d="M349.54,-220C330.0102,-220 308.9697,-220 288.0077,-220"/>
+<polygon fill="none" stroke="#000000" points="287.7306,-216.5001 277.7305,-220 287.7305,-223.5001 287.7306,-216.5001"/>
 </g>
 <!-- \\AustinHeap\\Security\\Txt\\SecurityTxtController -->
 <g id="node2" class="node">
@@ -42,13 +54,13 @@
 <text text-anchor="middle" x="443.4208" y="-162.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">SecurityTxtController</text>
 </g>
 <!-- \\Illuminate\\Routing\\Controller -->
-<g id="node5" class="node">
+<g id="node6" class="node">
 <title>\\Illuminate\\Routing\\Controller</title>
 <ellipse fill="none" stroke="#000000" cx="138.8034" cy="-166" rx="118.8452" ry="18"/>
 <text text-anchor="middle" x="138.8034" y="-161.8" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Illuminate\Routing\Controller</text>
 </g>
 <!-- \\AustinHeap\\Security\\Txt\\SecurityTxtController&#45;&gt;\\Illuminate\\Routing\\Controller -->
-<g id="edge1" class="edge">
+<g id="edge2" class="edge">
 <title>\\AustinHeap\\Security\\Txt\\SecurityTxtController&#45;&gt;\\Illuminate\\Routing\\Controller</title>
 <path fill="none" stroke="#000000" d="M366.1592,-166C336.2883,-166 301.2832,-166 267.8153,-166"/>
 <polygon fill="none" stroke="#000000" points="267.4854,-162.5001 257.4854,-166 267.4853,-169.5001 267.4854,-162.5001"/>
@@ -60,34 +72,22 @@
 <text text-anchor="middle" x="443.4208" y="-108.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">SecurityTxtFacade</text>
 </g>
 <!-- \\Illuminate\\Support\\Facades\\Facade -->
-<g id="node6" class="node">
+<g id="node7" class="node">
 <title>\\Illuminate\\Support\\Facades\\Facade</title>
 <ellipse fill="none" stroke="#000000" cx="138.8034" cy="-112" rx="137.6208" ry="18"/>
 <text text-anchor="middle" x="138.8034" y="-107.8" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Illuminate\Support\Facades\Facade</text>
 </g>
 <!-- \\AustinHeap\\Security\\Txt\\SecurityTxtFacade&#45;&gt;\\Illuminate\\Support\\Facades\\Facade -->
-<g id="edge2" class="edge">
+<g id="edge3" class="edge">
 <title>\\AustinHeap\\Security\\Txt\\SecurityTxtFacade&#45;&gt;\\Illuminate\\Support\\Facades\\Facade</title>
 <path fill="none" stroke="#000000" d="M379.1915,-112C352.0621,-112 319.2522,-112 286.7105,-112"/>
 <polygon fill="none" stroke="#000000" points="286.6266,-108.5001 276.6265,-112 286.6265,-115.5001 286.6266,-108.5001"/>
 </g>
-<!-- \\AustinHeap\\Security\\Txt\\SecurityTxtServiceProvider -->
+<!-- \\AustinHeap\\Security\\Txt\\SecurityTxtHelper -->
 <g id="node4" class="node">
-<title>\\AustinHeap\\Security\\Txt\\SecurityTxtServiceProvider</title>
-<polygon fill="none" stroke="#000000" points="537.0491,-76 349.7925,-76 349.7925,-40 537.0491,-40 537.0491,-76"/>
-<text text-anchor="middle" x="443.4208" y="-54.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">SecurityTxtServiceProvider</text>
-</g>
-<!-- \\Illuminate\\Support\\ServiceProvider -->
-<g id="node7" class="node">
-<title>\\Illuminate\\Support\\ServiceProvider</title>
-<ellipse fill="none" stroke="#000000" cx="138.8034" cy="-58" rx="138.6071" ry="18"/>
-<text text-anchor="middle" x="138.8034" y="-53.8" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Illuminate\Support\ServiceProvider</text>
-</g>
-<!-- \\AustinHeap\\Security\\Txt\\SecurityTxtServiceProvider&#45;&gt;\\Illuminate\\Support\\ServiceProvider -->
-<g id="edge3" class="edge">
-<title>\\AustinHeap\\Security\\Txt\\SecurityTxtServiceProvider&#45;&gt;\\Illuminate\\Support\\ServiceProvider</title>
-<path fill="none" stroke="#000000" d="M349.54,-58C330.0102,-58 308.9697,-58 288.0077,-58"/>
-<polygon fill="none" stroke="#000000" points="287.7306,-54.5001 277.7305,-58 287.7305,-61.5001 287.7306,-54.5001"/>
+<title>\\AustinHeap\\Security\\Txt\\SecurityTxtHelper</title>
+<polygon fill="none" stroke="#000000" points="507.6393,-76 379.2024,-76 379.2024,-40 507.6393,-40 507.6393,-76"/>
+<text text-anchor="middle" x="443.4208" y="-54.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">SecurityTxtHelper</text>
 </g>
 </g>
 </svg>
